@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Analysis</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #dfb9de, #5abbd6);
+            color: #fff;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            width: 200px;
+            height: 150px;
+            background: #51dec4;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            font-weight: bold;
+            color: #fff;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .fullscreen.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">CHURN Analysis</div>
+    <div class="box">
+        <div class="container">
+            <div class="card" onclick="openFullscreen('churn count.png')">
+                <span>Churn Count</span>
+            </div>
+            <div class="card" onclick="openFullscreen('churn vs tenure.png')">
+                <span>Churn vs Tenure</span>
+            </div>
+            <div class="card" onclick="openFullscreen('churn vs monthly charges.png')">
+                <span>Churn vs Monthly Charges</span>
+            </div>
+            <div class="card" onclick="openFullscreen('contract vs churn.png')">
+                <span>Churn vs Contract Type</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fullscreen" id="fullscreen" onclick="closeFullscreen()">
+        <img id="fullscreen-img" src="" alt="">
+    </div>
+    
+    <script>
+        function openFullscreen(imageSrc) {
+            document.getElementById('fullscreen-img').src = imageSrc;
+            document.getElementById('fullscreen').classList.add('active');
+        }
+        function closeFullscreen() {
+            document.getElementById('fullscreen').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Customer Prediction</title>
+    <script>
+        // Function to navigate to different pages based on input
+        function goToNextPage(page) {
+            window.location.href = page;
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #c6e2e9, #d8f3dc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            line-height: 1.2;
+            text-align: center;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 50px;
+            padding: 50px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 85%;
+            max-width: 1100px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: nowrap;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .card-title {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Churn Customer Prediction</h1>
+    </div>
+    <div class="content-box">
+        <div class="cards-container">
+            <div class="card">
+                <img src="overview.png" alt="Overview" onclick="goToNextPage('third.html')">
+                <div class="card-title" onclick="goToNextPage()">OVERVIEW</div>
+               
+            </div>
+            <div class="card">
+                <img src="churn1.png" alt="Updated Churn Customers" onclick="goToNextPage('churn.html')">
+                <div class="card-title" onclick="goToNextPage()">CHURN CUSTOMERS</div>
+            </div>
+            <div class="card">
+                <img src="graph2.png" alt="Updated Graph Analysis" onclick="goToNextPage('graph.html')">
+                <div class="card-title" onclick="goToNextPage()">GRAPH ANALYSIS</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

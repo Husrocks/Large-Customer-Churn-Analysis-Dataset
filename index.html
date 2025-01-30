@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Customer Prediction</title>
+    <script>
+        // Function to navigate to different pages based on input
+        function goToNextPage(page) {
+            window.location.href = page;
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #c6e2e9, #d8f3dc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1100px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .left {
+            width: 45%;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo::before {
+            content: '\2022\2022\2022';
+            color: black;
+            margin-right: 10px;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            line-height: 1.2;
+        }
+        h1 span {
+            font-weight: bold;
+        }
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+        .start-btn, .contact-btn {
+            padding: 15px 40px;
+            font-size: 22px;
+            color: black;
+            background: white;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .start-btn:hover, .contact-btn:hover {
+            background: #f1f1f1;
+        }
+        .start-btn {
+            background-color: #ffffff; /* Green */
+        }
+        .start-btn:hover {
+            background-color: #08efff; /* Darker Green */
+        }
+        .contact-btn {
+            background-color: #ffffff; /* Blue */
+        }
+        .contact-btn:hover {
+            background-color: #f7f7f7; /* Darker Blue */
+        }
+        .right {
+            width: 50%;
+        }
+        .right img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">Hus-Rocks</div>
+            <h1>Churn <br><span>Customer Prediction</span></h1>
+            <div class="button-container">
+                <button onclick="goToNextPage('second.html')" class="start-btn">Start</button>
+                <button onclick="goToNextPage('Contact_us.html')" class="contact-btn">Contact Us</button>
+            </div>
+        </div>
+        
+        <div class="right">
+            <img src="image.png" alt="Customer Churn Illustration">
+        </div>
+    </div>
+</body>
+</html>
